@@ -16,6 +16,7 @@ class chartdirector::install(
   exec { 'download':
     path    => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
     command => "wget http://download2.advsofteng.com/${tar_file}",
+    creates => "/tmp/${tar_file}",
     cwd     => '/tmp',
   }
   exec { 'extract':
