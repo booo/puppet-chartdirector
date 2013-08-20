@@ -1,3 +1,4 @@
 ; configuration for php chartdirector module
 ; this is a custom module handled by puppet
 extension=phpchartdir<%= @php_version %>.dll
+include_path=${include_path} ":/usr/lib/php5/<%= @php_extension_dir %>/"

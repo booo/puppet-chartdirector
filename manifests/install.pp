@@ -24,7 +24,7 @@ class chartdirector::install(
     cwd     => '/tmp',
     require => Exec['download'],
   }
-  file { "/usr/lib/php5/${chartdirector::php_extension_dir}":
+  file { "/usr/lib/php5/${php_extension_dir}":
     recurse => true,
     source  => '/tmp/ChartDirector/lib',
     require => Exec['extract']
